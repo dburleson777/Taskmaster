@@ -178,7 +178,9 @@ public class Chara {
             Image i = new Image(g.getFlist().get(cus), 80 - until, 80 - until, false, false);
             custom.setImage(i);
             custom.setTranslateY(45 + until);
-            custom.setTranslateX(260);
+            custom.setTranslateX(600);
+            visimage.setTranslateX(600);
+            custom.setVisible(true);
             root.getChildren().addAll(custom);
         }
         healed = true;
@@ -194,6 +196,7 @@ public class Chara {
         visimage.setFitHeight(cHeight + (80 - (3 * until)));
         visimage.setFitWidth(cWidth + (80 - (3 * until)));
         visimage.setTranslateY(200 + (2 * until));
+        root.getChildren().remove(custom);
     }
     
     public void move(){
